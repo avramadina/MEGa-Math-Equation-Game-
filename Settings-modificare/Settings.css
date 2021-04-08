@@ -1,0 +1,147 @@
+html {
+    display: block;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(149, 100, 209, 1) 0%, rgba(96, 59, 140, 1) 15%, rgba(15, 26, 80, 1) 40%, rgba(15, 26, 80, 1) 70%, rgba(96, 59, 140, 1) 85%, rgba(149, 100, 209, 1) 100%);
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    font-family: "Times New Roman", Times, serif;
+    text-align: justify;
+    letter-spacing: 2px;
+    height: 100%;
+}
+
+.container {
+    display: inline-block;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    height: 90%;
+}
+
+.logo-container {
+    float: left;
+    width: 25%;
+    height: 60%;
+    margin-top: 6%;
+    margin-right: 6%;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.settings {
+    float: left;
+    width: 37%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.336);
+    border-radius: 5%;
+}
+
+.onoffsettings, .buttonsettings, .submit_button, form {
+    width: 100%;
+    height: 10%;
+}
+
+.mylabel {
+    float: left;
+    width: 35%;
+    height: 100%;
+    background-color: rgb(51, 151, 233);
+    text-align: center;
+    margin-left: 15%;
+    margin-top: 10%;
+    border-radius: 15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #07f7f8;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+.onoffbutton {
+    float: right;
+    width: 20%;
+    margin-right: 15%;
+    margin-top: 8%;
+}
+
+.mybutton {
+    float: left;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    width: 40%;
+    height: 80%;
+    background-color: hotpink;
+    border-radius: 15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #f807bc;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    padding-top: 3%;
+}
+
+.myinput {
+    float: right;
+    width: 30%;
+    background-color: #cfeeee;
+    margin-right: 5%;
+    margin-top: 11%;
+    border-radius: 15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    padding: 3%;
+}
+
+.onoffbutton:hover, .mybutton:hover, .myinput:hover {
+    opacity: 0.7;
+}
+
+.Mytitle {
+    color: #07f7f8;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px #24f5f5, 0 0 5px rgb(116, 0, 139);
+    position: relative;
+    padding-top: 0px;
+    font-size: 80px;
+    margin: 0;
+    margin-bottom: 3%;
+}
+
+.topnav-right {
+    background-color: #fa2a9c73;
+    overflow: hidden;
+}
+
+.topnav-right a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav-right a:hover {
+    background-color: #fa2a9c81;
+    color: #ffffff;
+}
+
+.icon_sound {
+    width: 70%;
+    height: 100%;
+}
+
+.noback {
+    
+}
