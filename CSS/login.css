@@ -112,14 +112,6 @@ button:hover {
     display: inline-flex;
 }
 
-.options {
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    align-self: center;
-}
-
 @media (max-width: 650px) {
     .topnav-right {
         width: 100%;
