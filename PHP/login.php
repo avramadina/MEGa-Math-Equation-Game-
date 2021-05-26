@@ -10,11 +10,11 @@ class Login{
                 $email = $_POST["email"];
                 $parola = md5($_POST["parola"]);
             
-                $query = "SELECT * FROM users WHERE email = '$email' AND parola = '$parola';";
-                $result = pg_query($conn, $query);
+                $query = "SELECT * FROM users WHERE email = $1 AND parola = $2;";
+                $result = pg_query_params($conn, $query, array($email, $parola));
                 if(pg_num_rows($result) > 0) {
                     // $guery2 = ""
-                    header('Location: Games.html');
+                    header('Location: ../HTML/Games.html');
                     die();
                 }
                  else echo "Nu m am conectat"; 

@@ -15,11 +15,11 @@
                 $email = $_POST["email"];
                 $parola = md5($_POST["parola"]);
             
-                $logat = false;
+                $logat = 0;
 
                 $query = pg_query($conn, "INSERT INTO users (id, nume, prenume, email, parola, logat)  VALUES ((SELECT COALESCE(MAX(id)+1,1) FROM users), '$nume', '$prenume', '$email', '$parola', '$logat');");
                 if ( $query ) {
-                    header('Location: Login.html');
+                    header('Location: ../HTML/Login.html');
                     die();
                 }
                 else echo "Nu m am conecat";
