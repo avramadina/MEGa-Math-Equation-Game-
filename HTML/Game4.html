@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/game4.css" />
+    <title>Geometric Shapes Game</title>
+</head>
+
+<body class="body">
+    <div class="topnav-right">
+        <a href="../HTML/home.html">Home</a>
+        <a href="../HTML/Games.html">Games</a>
+    </div>
+    <h1>GAMES</h1>
+    <section class="section_buttons">
+        <form action="../HTML/Game4.html"><button type="submit" class="buttons button0">grade<img class = "icons" src="../IMG/0.png" alt="0 img"></button></form>
+        <form action="../HTML/Game4.html"><button type="submit" class="buttons button1">grade<img class = "icons" src="../IMG/1.png" alt="1 img"></button></form>
+        <form action="../HTML/Game4.html"><button type="submit" class="buttons button2">grade<img class = "icons" src="../IMG/2.png" alt="2 img"></button></form>
+        <form action="../HTML/Game4.html"><button type="submit" class="buttons button3">grade<img class = "icons" src="../IMG/3.png" alt="3 img"></button></form>
+        <form action="../HTML/Game4.html"><button type="submit" class="buttons button4">grade<img class = "icons" src="../IMG/4.png" alt="4 img"></button></form>
+    </section>
+    <hr>
+
+    <section class="play">
+        <div class="settings">
+            <form class="form_score"> <label class="score"><b> Score</b></label></form>
+            <img class="icon_sound" src="../IMG/soundON.png" onclick="this.src=' ../IMG/soundOFF.png'  " alt="img">
+        </div>
+        <form class="form">
+            <br>
+            <h2>Geometric Shapes</h2>
+            <div class="timer" id="app"></div>
+
+            <script type="text/javascript" src="../JS/Game1.js"></script>
+
+            <br>
+            <div class="equation">
+                <img class="shape_img" src="../IMG/triangle.png" alt="img">
+                <div class="resolve">
+                    <select id="shapes" name="cars">
+                    <option value="triunghi">Triunghi</option>
+                    <option value="cerc">Cerc</option>
+                    <option value="patrat">Patrat</option>
+                    <option value="dreptunghi">Dreptunghi</option>
+                  </select>
+
+                    <label><b> l=3; Perimetrul este: </b></label>
+                    <input maxlength="4">
+                </div>
+
+            </div>
+            <div class="buttons_form">
+                <button class="buttons_form_style" formaction="../HTML/Game4.html" type="submit">Reply</button>
+                <button class="buttons_form_style" type="submit">Verify</button>
+                <button class="buttons_form_style" type="submit">Next Equation</button>
+
+            </div>
+
+
+            <br> <br><br><br>
+        </form>
+
+    </section>
+
+    <!-- <button onclick="openFullscreen();"></button>
+    <img src="fullscreen.png" width="100%" controls id="fullscreen"> -->
+</body>
+
+</html>
