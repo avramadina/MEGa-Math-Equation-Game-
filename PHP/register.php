@@ -1,9 +1,9 @@
 <?php
 
-    class Utilizator{ // CRUD = Create / Read / Update / Delete
+    class Utilizator{ 
      
         public function adauga_utilizator(){
-            $conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=iulia"); 
+            $conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=postgres"); 
 
             if(isset($_POST["nume"]) && $_POST["nume"]!='' &&
                 isset($_POST["prenume"]) && $_POST["prenume"]!='' &&
