@@ -11,6 +11,23 @@
 
 <body>
     <div class="topnav-right">
+        <!-- <?php
+        // session_start();
+        // if ((isset($_SESSION["utilizator"]) || $_SESSION["utilizator"]!='') && $_SESSION["utilizator"]=="admin@yahoo.com")
+        //     echo "<a href=\"../HTML/AddExercise.html\">AddExercise</a>";
+        // else
+        // {
+        //     echo "<a href=\"../HTML/home.html\">Home</a>
+        //     <a href=\"../HTML/Register.html\">Register</a>
+        //     <a href=\"../HTML/Settings.html\">Settings</a>";
+        // }
+        // if (!isset($_SESSION["utilizator"]) || $_SESSION["utilizator"]=='')
+        //     echo "<a href=\"../HTML/Login.html\">Login</a>";
+        // else
+        //     echo "<a href=\"../PHP/logout.php\">Logout</a>";
+        ?> -->
+        
+        
         <a href="../HTML/home.html">Home</a>
         <a href="../HTML/Register.html">Register</a>
         <a href="../HTML/Settings.html">Settings</a>
@@ -19,8 +36,8 @@
             if (!isset($_SESSION["utilizator"]) || $_SESSION["utilizator"]=='')
                 echo "<a href=\"../HTML/Login.html\">Login</a>";
             else
-                echo "<a href=\"../PHP/logout.php\">".$_SESSION["utilizator"].": Logout</a>";
-        ?>
+                echo "<a href=\"../PHP/logout.php\">Logout</a>";
+        ?> 
 
     </div>
     <h1>GAMES</h1>

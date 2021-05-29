@@ -1,9 +1,7 @@
 <?php
 
-    class Utilizator{ 
-     
-        public function adauga_utilizator(){
-            $conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=postgres"); 
+    
+            $conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=iulia"); 
 
             if(isset($_POST["nume"]) && $_POST["nume"]!='' &&
                 isset($_POST["prenume"]) && $_POST["prenume"]!='' &&
@@ -22,17 +20,14 @@
                     header('Location: ../HTML/Login.html');
                     die();
                 }
-                else echo "Nu m am conecat";
+                else header('Location: ../HTML/Login.html?error=emptyinput');
+                //echo "Nu m am conecat";
             
             } 
             else echo "Nu m am conectat";  
             
-        }
-    }
-
-    
-    $utilizator = new Utilizator();
-    $utilizator->adauga_utilizator();
+        
+   
    
 
 ?>

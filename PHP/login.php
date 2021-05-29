@@ -2,7 +2,7 @@
 // class Login{
         // public function autentificare(){
 
-            $conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=postgres"); 
+            $conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=iulia"); 
             session_start();
             if(isset($_POST["email"]) && $_POST["email"]!='' &&
                 isset($_POST["parola"]) && $_POST["parola"]!='') {
@@ -14,7 +14,7 @@
                 $result = pg_query_params($conn, $query, array($email, $parola));
                 if(pg_num_rows($result) > 0) 
                     $_SESSION["utilizator"] = $_POST["email"];
-                    header('Location: ../PHP/IndexGame.php');
+                    header('Location: ../PHP/indexAdmin.php');
                     die();
             }
                 
