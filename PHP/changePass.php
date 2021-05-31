@@ -1,7 +1,7 @@
 <?php
 class ChangePass { // CRUD = Create / Read / Update / Delete
     public function schimbare_parola() {
-        $conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=postgres");
+        $conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=iulia");
 
         if (isset($_POST["email"]) && isset($_POST["parola_curenta"]) && isset($_POST["parola_noua"])) {
             $email = $_POST["email"];

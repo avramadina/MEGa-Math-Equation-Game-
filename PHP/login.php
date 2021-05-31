@@ -3,7 +3,7 @@ class Login
 {
     public function autentificare()
     {
-        $conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=postgres");
+        $conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=iulia");
         session_start();
         if (isset($_POST["email"]) && isset($_POST["parola"])) {
             $email = $_POST["email"];
