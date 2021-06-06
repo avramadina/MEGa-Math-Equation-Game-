@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/login.css" />
+    <title>Login</title>
+</head>
+
+<body class="body">
+
+    <div class="topnav-right">
+        <a href="../HTML/home.html">Home</a>
+        <a href="../HTML/Register.html">Register</a>
+        <a href="../HTML/Games.html">Games</a>
+        <a href="../HTML/Settings.html">Settings</a>
+        
+    </div>
+
+    <section>
+        <img src="../IMG/bufLog.png" alt="img">
+        <div class="positionForm">
+            <h1> WELCOME!</h1>
+            <form class="form" method="POST" action="../PHP/login.php">
+                <div class="imgcontainer">
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" id="email" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" id="psw" placeholder="Enter Password" name="parola" required>
+
+                    <label><input class = "rememberMe" type="checkbox" checked="checked" name="remember">Remember me</label>
+
+                    <button class="button_login" type="submit">Login</button>
+
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+</body>
+
+</html>

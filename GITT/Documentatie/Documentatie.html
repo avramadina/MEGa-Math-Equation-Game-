@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>MEGa - Scholarly HTML</title>
+    <link rel="stylesheet" href="documentatie.css">
+    <!-- <link rel="stylesheet" href="http://scholarly.vernacular.io/scholarly.css"> -->
+</head>
+
+<body prefix="schema:http://schema.org/" prefix="sa:https://ns.science.ai/" itemscope itemtype="http://schema.org/WebPage">
+    <article resoluce="#" typeof="schema:ScholarlyArticle">
+        <header>
+            <h1>MEGa - Math Equation Game</h1>
+        </header>
+        <section id="authors" typeof="AuthorsList">
+            <div role="contentinfo">
+                <h2>Realizat de:</h2>
+                <ul>
+                    <li typeof="sa:ContributorRole" property="schema:author">
+                        <span typeof="schema:Person">
+                        <meta property="schema:familyName" content="Avram"/>
+                        <meta property="schema:givenName" content="Adina"/>
+                        <meta property="schema:additionalName" content="Valentina"/>
+                        <span property="schema:name">Avram Adina Valentina</span>
+                        <a href="https://github.com/avramadina" itemprop="url">/GitHub</a>
+                        <!-- <a href="avramadina17@gmail.com" itemprop="url">/email</a> -->
+                        </span>
+                    </li>
+                    <li typeof="sa:ContributorRole" property="schema:author">
+                        <span typeof="schema:Person">
+                     <meta property="schema:familyName" content="Oceanu"/>
+                     <meta property="schema:givenName" content="Iulia"/>
+                     <span property="schema:name">Oceanu Iulia</span>
+                        <a href="https://github.com/iuliaoceanu" itemprop="url">/GitHub</a>
+                        <!-- <a href="iuliaoceanu@gmail.com" itemprop="url">/email</a> -->
+                        </span>
+                    </li>
+                    <li typeof="sa:ContributorRole" property="schema:author">
+                        <span typeof="schema:Person">
+                     <meta property="schema:familyName" content="Pohoata"/>
+                     <meta property="schema:givenName" content="Alexandra"/>
+                     <meta property="schema:additionalName" content="Elena"/>
+                     <span property="schema:name">Pohoață Alexandra Elena</span>
+                        <a href="https://github.com/alexandrapohoata" itemprop="url">/GitHub</a>
+                        <!-- <a href="pohoataalexandraelena@gmail.com" itemprop="url">/email</a> -->
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </section>
+        <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+            <h2>Abstract</h2>
+            <p>MEGa - Math Equation Game este un joc de matematică cu scop educativ, care ajută utilizatorii să învețe matematica într-un mod ludic.</p>
+        </section>
+        <section id="introduction" role="doc-introduction">
+            <h2 id="introduction">1. Introducere</h2>
+            <h3 id="Introduction-purpose">1.1 Notă document</h3>
+            <p>Documentarea proiectului: MEGa-Math-Equation-Game, un joc ce ajută utilizatorii să învețe matematica într-un mod distractiv. Documentul este creat după un template <a href="https://github.com/rick4470/IEEE-SRS-Tempate/blob/master/README.md#revision-history">IEEE-SRS-Tempate</a>și
+                are scop informativ.</p>
+
+            <h3 id="product scope">1.2 Scopul jocului </h3>
+            <p id="domeniu">Site-ul se încadrează în domeniul matematic, el furnizează atât teoria legată de matematica primară, cât și exerciții matematice din domeniile aritmeticii și geometriei.</p>
+            <p id="scop-products">MEGa-Math-Equation-Game este un joc web creat cu scopul de a ajuta elevii din clasele primare să învețe matematică.</p>
+            <p id="obiective"></p>
+        </section>
+        <section typeof="sa:MaterialsAndMethods">
+            <h2>2. Descriere de ansamblu</h2>
+            <h3 id="overall">2.1 Functionalitățile jocului</h3>
+            <p>Aplicația pune la dispoziție utilizatorului diverse funcții, precum crearea unui cont și folosirea lui pentru jocuri bonus, logarea în aplicație, modificarea setărilor jocului și jocurile propriu-zise, care pot fi accesate de un utilizator
+                atât logat, cât și nelogat. </p>
+            <h3 id="users">2.2 Clase de utilizatori și caracteristici</h3>
+            <p>Jocul este construit în așa fel încât utilizatorii, copii cu vârste între 5 și 10 ani, să fie atrași de interfața jucăușă, viu colorată, cu tematica matematică.</p>
+            <p>Utilizatorii se împart în două categorii: cei fără cont, nelogați, și cei care au cont în aplicatie, logați.</p>
+            <h3 id=" operating-environment">2.3 Mediul de Operare</h3>
+            <p>Aplicația este concepută pentru a putea fi accesată de pe orice dispozitiv care dispune de un browser web și de o conexiune la internet.</p>
+            <h3 id="constraints">2.4 Constrângeri de proiectare și implementare</h3>
+            <p>Site-ul impune anumite constrângeri: atunci când site-ul este accesat de pe un telefon sau o tabletă, utilizatorul este obligat să folosească dispozitivul pe orizontală.</p>
+            <h3 id="user_documentation">2.5 Documentația utilizatorului</h3>
+            <p>Utilizatorul dispune de o pagină de informații despre jocuri. Această pagină descrie utilizarea fiecărui joc în parte.</p>
+            <h3 id="assumptions">2.6 Ipoteze și dependențe</h3>
+            <p>Ipotetic vorbind, site-ul se bazează pe o interacțiune server client, în care clientul, utilizatorul, face o cerere din browser, prin interfața web a jocului, către server, care este site-ul jocului.</p>
+            <p>Principalele răspunsuri la cererea clientului sunt accesate dintr-o bază de date, care conține informații despre client și exercițiile furnizate, stocate, în funcție de gradul de dificultate.</p>
+
+        </section>
+        <section typeof="sa:MaterialsAndMethods">
+            <h2 id="requirements">3. Descriere Interfață</h2>
+            <h3 id="design">3.1 Design</h3>
+            <p>Jocul este conceput pentru copii cu vârste între 5 și 10 ani, de aceea design-ul site-ului este destinat copiilor. Culorile folosite sunt îmbinate cu un background închis, pentru a le accentua.</p>
+            <p>Pentru background am folosit culoarea violet, fiind o culoare asociată cu ambiția și puterea. Este o culoare care tinde să fie aleasă de persoanele inteligente, de aceea am selectat-o pentru jocul de matematică.</p>
+            <p>Butoanele sunt viu colorate, cu tente fosforescente, pentru a ieși în evidență pe background-ul închis. Ele conțin și imagini, pentru a fi cât mai sugestive copiilor. Site-ul atrage atenția prin animalele inserate pentru design, deoarece animalele
+                atrag copiii.</p>
+            <p>Jocurile propriu-zise au un background turcoaz, pentru a accentua jocul și nimic alceva. Folosirea timer-ului pune jucătorul să gândească sub presiune, învațându-l să lucreze cât mai rapid.</p>
+            <p>Design-ul se poate observa mai în detaliu pe pagina: <a href="../Interfata/home.html">MEGa</a></p>
+            <h3 id="used_technologies">3.2 Tehnologii utilizate</h3>
+            <ul>
+                <li id="html"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
+                <li id="css"><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
+                <li id="js"><a href="https://en.wikipedia.org/wiki/JavaScript">JS</a></li>
+            </ul>
+            <h3 id="page_description">3.3 Caracteristici ale sistemului</h3>
+            <h4 id="general_description">3.3.1 Descriere generală</h4>
+            <ul>
+                <li>
+                    <p>Pagina principală - Home: conține 4 butoane pentru accesarea paginilor, asemănătoare unui meniu: Login, Register, Games, Settings.</p>
+                </li>
+                <li>
+                    <p>Paginile contului - Login, Register: sunt destinate pentru logarea utilizatorului și crearea unui cont nou.</p>
+                </li>
+                <li>
+                    <p>Pagina jocurilor - Games: conține o pagină de învățare a teoriei, 3 jocuri din ariile algebrei și geometriei și un joc în care utilizatorul poate adăuga ecuații, urmând ca site-ul să le resolve.</p>
+                </li>
+                <li>
+                    <p>Pagina setărilor - Settings: conține setări asupra sunetului, a muzicii, a nickname-lui, schimbării parolei și o secțiune de informații referitoare la jocuri.</p>
+                </li>
+            </ul>
+
+            <h4 id="general_description">3.3.2 Descriere functionalități</h4>
+            <ul>
+                <li>
+                    <h5 id="register">Funcția Creare cont</h5>
+                    <p>Site-ul web pune la dispoziție o pagină pentru crearea unui cont. Contul se creează pe baza unui formular și se validează prin email, cei care dețin un cont beneaficiază de un joc bonus.</p>
+                </li>
+                <li>
+                    <h5 id="login">Funcția de logare</h5>
+                    <p>Pagina de logare se adresează utilizatorilor care dețin deja un cont. În urma logării, aceștia beneficiază de un joc în care pot introduce ecuații, urmând ca acestea să fie rezolvate și salvate. În cazul în care parola este uitată,
+                        utilizatorul poate folosi funcția de schimbare a parolei.</p>
+                </li>
+                <li>
+                    <h5 id="settings">Utilizarea setărilor</h5>
+                    <p>În această pagină, utilizatorul poate seta ambientul jocului: muzica de pe fundal, sunetul click-urilor, nickname-ul. De asemenea, tot aici se pot găsi informații despre jocuri și un buton de schimbare a parolei.</p>
+                </li>
+                <li>
+                    <h5 id="games">Functionalitățile jocurilor</h5>
+                    <p>Utilizatorul poate alege ce dorește să joace. Jocurile sunt concepute astfel încât răspunsul jucătorului să fie stocat printr-un formular, pentru a putea fi evaluat. Fiecare joc pune la dispoziție un buton de resetare a jocului și
+                        unul pentru trecerea la următorul exercițiu. Fiecare exercițiu are un timp standard de rezolvare. Odată ce timpul s-a terminat, utilizatorului i se va scădea scorul și va primi o indicație despre rezolvarea exercițiului.</p>
+                    <p>Ultimul joc este destinat celor ce sunt logați. Aici se pot introduce ecuații, care urmează să fie rezolvate și salvate.</p>
+                </li>
+            </ul>
+
+
+        </section>
+        <section typeof="sa:MaterialsAndMethods" id="sarcini">
+            <h3 class="title-container">4. Sarcini</h3>
+            <ul>
+                <p>- Avram Adina Valentina: Pagina Login, Pagina Info</p>
+                <p>- Oceanu Iulia: Pagina Home, Pagina Games</p>
+                <p>- Pohoață Alexandra Elena: Pagina Register, Pagina Settings, Pagina ChangePassword</p>
+                <p>- Avram Adina Valentina & Oceanu Iulia : Pagina Learn, Pagina Game1, Pagina Game2, Pagina Game3, Pagina Game4, Pagina Game5</p>
+                <p>- Avram Adina Valentina & Oceanu Iulia & Pohoață Alexandra Elena: Documentație</p>
+            </ul>
+        </section>
+        <section typeof="sa:MaterialsAndMethods" id="Bibliografia">
+            <h3 id="product-references" typeof="schema:ReferenceList">5. Referințe</h3>
+            <ol>
+                <li typeof="schema:ScholarlyArticle" resource="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html">
+                    <span property="schema:author" typeof="schema:Person">
+        <span property="schema:familyName">Buraga</span>
+                    <span property="schema:givenName">Sabin</span>
+                    <span property="schema:additionalName">Corneliu</span>
+                    </span>
+                    <cite property="schema:citation"><a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html">Site-ul materiei Tehnologii Web</a>.</cite>
+                </li>
+
+                <li typeof="schema:ScholarlyArticle" resource="https://github.com/rick4470/IEEE-SRS-Tempate#14-product-scope">
+                    <span property="schema:author" typeof="schema:Person">
+        <span property="schema:familyName">H.</span>
+                    <span property="schema:givenName">Rick</span>
+                    </span>
+                    <cite property="schema:citation"><a href="https://github.com/rick4470">Rick's GitHub</a>.</cite>
+                </li>
+                <li typeof="schema:ScholarlyArticle" resource="https://www.w3schools.com">
+                    <cite property="schema:citation"><a href="https://www.w3schools.com">https://www.w3schools.com</a>.</cite>
+                </li>
+            </ol>
+        </section>
+    </article>
+</body>
+
+</html>

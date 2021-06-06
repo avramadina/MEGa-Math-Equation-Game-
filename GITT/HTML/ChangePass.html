@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/changePass.css" />
+    <title>Change Password</title>
+</head>
+
+<body class="body">
+    <div class="topnav-right">
+        <a href="../HTML/home.html">Home</a>
+        <a href="../HTML/Login.html">Login</a>
+        <a href="../HTML/Register.html">Register</a>
+        <a href="../HTML/Settings.html">Settings</a>
+    </div>
+    <section>
+        <img src="../IMG/bufLog.png" alt="img">
+        <div class="positionForm">
+            <h1>Change<br> Password</h1>
+
+            <script>
+                function valideaza_formular() {
+                    var p1 = document.forms["reg"]["parola_noua"].value;
+                    var p2 = document.forms["reg"]["parola_noua2"].value;
+                    if (p1 !== p2) alert("Parolele nu coincid");
+                    return (p1 === p2);
+                }
+            </script>
+
+            <form class="form" name="reg" method="POST" action="../PHP/changePass.php" onsubmit="return valideaza_formular()">
+                <br>
+                <div class="imgcontainer">
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" id="email" placeholder="Enter Email" name="email" required>
+
+                    <label for="cpsw"><b>Current Password</b></label>
+                    <input type="password" id="cpsw" placeholder="Enter Current Password" name="parola_curenta" required>
+
+                    <label for="npsw"><b>New Password</b></label>
+                    <input type="password" id="npsw" placeholder="Enter New Password" name="parola_noua" required>
+
+                    <label for="cnpsw"><b>Confirm New Password</b></label>
+                    <input type="password" id="cnpsw" placeholder="Enter New Password" name="parola_noua2" required>
+
+                    <button type="submit">Change</button>
+                </div>
+
+                <br>
+
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+</body>
+
+</html>

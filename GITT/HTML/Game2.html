@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/game2.css" />
+    <title>Multiply and Divide Game</title>
+</head>
+
+<body class="body">
+    <div class="topnav-right">
+        <a href="../HTML/home.html">Home</a>
+        <a href="../HTML/Games.html">Games</a>
+    </div>
+
+    <section class="play">
+
+        <form class="form">
+
+            <div class="settings">
+                <label class="score"><b> Score</b></label>
+                <h2>Multiply and Divide</h2>
+                <img class="icon_sound" src="../IMG/soundON.png" onclick="this.src='../IMG/soundOFF.png'  " alt="img">
+            </div>
+            <br>
+            <div class="timer" id="app"></div>
+
+            <script type="text/javascript" src="../JS/timer&screen.js"></script>
+
+            <br><br>
+            <div class="equation">
+                <label><b> <?php include '../PHP/printEx.php' ?></b></label>
+                <input maxlength="4">
+            </div>
+            <div class="buttons_form">
+                <button class="buttons_form_style" formaction="../HTML/Game2.html" type="submit">Reply</button>
+                <button class="buttons_form_style" type="submit">Verify</button>
+                <button class="buttons_form_style" type="submit">Next Equation</button>
+
+            </div>
+
+
+            <br> <br><br><br>
+        </form>
+
+    </section>
+
+    <!-- <button onclick="openFullscreen();"></button>
+    <img src="fullscreen.png" width="100%" controls id="fullscreen"> -->
+</body>
+
+</html>
