@@ -25,15 +25,8 @@
 
 
     <h1>WELCOME ADMIN!!</h1>
-    <!-- <script>
-        function valideaza_formular() {
-            var grad = document.forms["reg"]["grad"].value;
 
-            if (grad > 5 && grad < 0) alert("Gradul este intre 1 si 4");
-            return (grad > 5 && grad < 0);
-        }
-    </script> -->
-    <form name="reg" method="POST" action="../PHP/addExercise.php" >
+    <form enctype="multipart/form-data" name="reg" method="POST" action="../PHP/addExercise.php" >
         <div class="imgcontainer">
             <label for="categorie"><b>Category</b></label>
 
@@ -46,17 +39,25 @@
                 </select>
 
             <label for="exercitiu"><b>Exercise</b></label>
-            <input type="text" id="exercitiu" placeholder="Enter Exercise" name="exercitiu" required>
+            <input type="text" id="exercitiu" placeholder="Enter Exercise" name="exercitiu">
 
             <label for="raspuns"><b>Solving</b></label>
-            <input type="text" id="raspuns" placeholder="Enter Solving" name="raspuns" required>
+            <input type="text" id="raspuns" placeholder="Enter Solving" name="raspuns">
 
             <label for="grad"><b>Grad</b></label>
-            <input type="number" id="grad" placeholder="Enter grad" name="grad" required>
+            <input type="number" id="grad" placeholder="Enter grad" name="grad">
 
+            <!-- https://websistent.com/multiple-submit-buttons-in-php/ -->
+            <div class="buttons">
+                <input class="button_save" type="submit" name="btn_submit" value="Save"/>
+                <input class="button_save" type="file" name="userfile" accept=".csv" />
+                <!-- <button class="button_save" type="submit" name="submit">Upload fisier</button> -->
+                <input class="button_save" type="submit" name="btn_submit" value="Import CSV" />
+                <input class="button_save" type="submit" name="btn_submit" value="Export CSV" />
+            </div>
 
-            <br>
-            <button class="button_save" type="submit" name="submit">Save</button>
+            <!-- <br> -->
+            <!-- <button class="button_save" type="submit" name="submit">Save</button> -->
 
         </div>
 

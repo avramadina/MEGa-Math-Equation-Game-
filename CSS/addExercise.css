@@ -98,7 +98,7 @@ input {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 40%;
+    width: auto;
     align-self: center;
     border-radius: 30px;
 }
@@ -177,4 +177,10 @@ button:hover {
         display: inline-flex;
         justify-content: center;
     }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    /* flex-direction:unset; */
 }
