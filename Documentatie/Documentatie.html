@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,11 +60,11 @@
         <section id="introduction" role="doc-introduction">
             <h2 id="introduction">1. Introducere</h2>
             <h3 id="Introduction-purpose">1.1 Notă document</h3>
-            <p>Documentarea proiectului: MEGa-Math-Equation-Game, un joc ce ajută utilizatorii să învețe matematica într-un mod distractiv. Documentul este creat după un template <a href="https://github.com/rick4470/IEEE-SRS-Tempate/blob/master/README.md#revision-history">IEEE-SRS-Tempate</a>și
+            <p>Documentarea proiectului: MEGa-Math-Equation-Game, un joc ce ajută utilizatorii să învețe matematica într-un mod distractiv. Documentul este creat după un template <a href="https://github.com/rick4470/IEEE-SRS-Tempate/blob/master/README.md#revision-history"> IEEE-SRS-Template </a> și
                 are scop informativ.</p>
 
             <h3 id="product scope">1.2 Scopul jocului </h3>
-            <p id="domeniu">Site-ul se încadrează în domeniul matematic, el furnizează atât teoria legată de matematica primară, cât și exerciții matematice din domeniile aritmeticii și geometriei.</p>
+            <p id="domeniu">Site-ul se încadrează în domeniul matematic, el furnizează atât teoria legată de matematica primară, cât și exerciții matematice din domeniile aritmeticii, precum adunări, scăderi, îmnulțiri și împărțiri.</p>
             <p id="scop-products">MEGa-Math-Equation-Game este un joc web creat cu scopul de a ajuta elevii din clasele primare să învețe matematică.</p>
             <p id="obiective"></p>
         </section>
@@ -100,8 +101,10 @@
                 <li id="html"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
                 <li id="css"><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
                 <li id="js"><a href="https://en.wikipedia.org/wiki/JavaScript">JS</a></li>
+                <li id="php"><a href="https://www.php.net/">PHP</a></li>
+                <li id="psql"><a href="https://www.php.net/manual/ro/book.pgsql.php">PostgreSQL</a></li>
             </ul>
-            <h3 id="page_description">3.3 Caracteristici ale sistemului</h3>
+            <h3 id="page_description">3.3 Caracteristici interfață</h3>
             <h4 id="general_description">3.3.1 Descriere generală</h4>
             <ul>
                 <li>
@@ -111,14 +114,18 @@
                     <p>Paginile contului - Login, Register: sunt destinate pentru logarea utilizatorului și crearea unui cont nou.</p>
                 </li>
                 <li>
-                    <p>Pagina jocurilor - Games: conține o pagină de învățare a teoriei, 3 jocuri din ariile algebrei și geometriei și un joc în care utilizatorul poate adăuga ecuații, urmând ca site-ul să le resolve.</p>
+                    <p>Pagina jocurilor - Games: conține o pagină de învățare a teoriei, o pagina unde să rezolve exercițiile (în care primește random ecuații de calcul), iar pentru utilizatorii logați un test de inteligență matematică. </p>
                 </li>
                 <li>
                     <p>Pagina setărilor - Settings: conține setări asupra sunetului, a muzicii, a nickname-lui, schimbării parolei și o secțiune de informații referitoare la jocuri.</p>
                 </li>
+                <li>
+                    <p>Pagina adminului - Admin: conține un formular ce oferă posibiliatea de a insera exerciții în baza de date și modalitatea de a face import/export bazei de date.</p>
+                </li>
             </ul>
 
             <h4 id="general_description">3.3.2 Descriere functionalități</h4>
+            <img src="UMLproiect.png" alt="">
             <ul>
                 <li>
                     <h5 id="register">Funcția Creare cont</h5>
@@ -131,26 +138,61 @@
                 </li>
                 <li>
                     <h5 id="settings">Utilizarea setărilor</h5>
-                    <p>În această pagină, utilizatorul poate seta ambientul jocului: muzica de pe fundal, sunetul click-urilor, nickname-ul. De asemenea, tot aici se pot găsi informații despre jocuri și un buton de schimbare a parolei.</p>
+                    <p>În această pagină, utilizatorul poate găsi informații despre joc și un buton de schimbare a parolei.</p>
                 </li>
                 <li>
                     <h5 id="games">Functionalitățile jocurilor</h5>
-                    <p>Utilizatorul poate alege ce dorește să joace. Jocurile sunt concepute astfel încât răspunsul jucătorului să fie stocat printr-un formular, pentru a putea fi evaluat. Fiecare joc pune la dispoziție un buton de resetare a jocului și
-                        unul pentru trecerea la următorul exercițiu. Fiecare exercițiu are un timp standard de rezolvare. Odată ce timpul s-a terminat, utilizatorului i se va scădea scorul și va primi o indicație despre rezolvarea exercițiului.</p>
-                    <p>Ultimul joc este destinat celor ce sunt logați. Aici se pot introduce ecuații, care urmează să fie rezolvate și salvate.</p>
+                    <p>Exercițiile propriu-zise sunt date random după ce se rezolvă un exercițiu. Dacă exercițiul este corect scorul crește. Fiecare exercițiu are un timp standard de rezolvare. Odată ce timpul s-a terminat, utilizatorului i se va scădea scorul și va primi exercițiul următor. </p>
+                    <p>Testul de inteligență este destinat celor ce sunt logați. Quiz game este un test de inteligență matematică și conține 10 întrebări, care sunt evaluate după submit. În funcție de rezultat se oferă "sfaturi" pentru îmbunătățirea abilităților matematice.</p>
+                </li>
+                <li>
+                    <h5 id="games">Interfața software</h5>
+                    <p>Aplicația comunică cu o baza de date PostgreSQL, din care extragem/inserăm informațiile de care avem nevoie. </p>
                 </li>
             </ul>
 
 
         </section>
+
+
+        <section typeof="sa:MaterialsAndMethods">
+            <h2 id="requirements">4. Caracteristci ale sistemului </h2>
+            <h3 id="design">4.1 Generarea de exerciții</h3>
+            <p>Jucătorul primește un exercițiu pe care trebuie să îl rezolve într-un timp limitat, fiind cronometrat de timer-ul jocului.</p>
+            <p>Jucătorul primește următorul exercițiu atunci când trimite un răspuns sau când timpul s-a terminat.</p>
+            <p>Jucătorul tastează răspunsul gândit, după care va primi un scor ce îi va arăta numărul de întrebări corecte la care a răspuns.</p>
+            
+            <h3 id="design">4.2 Descriere funcționalități backend</h3>
+            <h5>Register</h5>
+            <p>Pentru funcția de înregistrare folosim un formular în HTML pentru a prelua datele utilizatorului si a le modela în PHP. Apoi în PHP deschidem o conexiune în baza de date, extragem datele din formular, creează un querry și le completează în baza de date, apoi răspunde clientului.  </p>
+           
+            <h5>Login</h5>
+            <p>Pentru funcția de logare folosim un formular în HTML pentru a prelua datele utilizatorului, apoi verificăm dacă utilizatorul se află în baza de date și deschidem o sesiune. Tot aici verificăm dacă utilizatorul este admin și îi dăm drept de admin. De-a lungul sesiunii facem funcția de delogare și accesăm testul de inteligență. </p>
+            
+            <h5>Funcțiile adminului</h5>
+            <p>Adminul are propria sa interfață de unde poate exercita comenzi asupra bazei de date: adăugare exercițiu nou, export tabelă și import csv. </p>
+           
+            <h5>Implementarea jocului</h5>
+            <p>Pentru afișarea jocurilor în consolă ne folosim de un apel AJAX, funcția php apelată primește ca parametru un JSON ce conține gradul setat de utilizator și returnează un joc random din baza de date în funcție de grad. </p>
+        
+            <h5>Verificarea răspunsului</h5>
+            <p>Pentru validarea răspunsului ne folosim tot de AJAX unde apelăm un PHP cu un JSON care conține jocul curent, răspunsul jucătorului și scorul la momentul curent. În PHP vom parsa JSON-ul și vom extrage cele 3 variabile. După vom exrage răspunsul corect din baza de date. Dacă răspunsul extras coincide cu răspunsul primit ca input incrementăm scorul, altfel nu. În final este returnat scorul care va fi afișat în consolă. </p>  
+
+            <h5>Quiz game</h5>
+            <p>Quiz-ul reprezintă un test de inteligență matematică. Este creat într-un formular, iar răspunsul este trimis în PHP pentru validare. PHP-ul în urma validării, în funcție de reziltat apelează pagina pentru quiz promovat sau quiz nepromovat, pagini ce vor oferi sfaturi utilizatorului. </p>
+        </section>
+
+
+
         <section typeof="sa:MaterialsAndMethods" id="sarcini">
             <h3 class="title-container">4. Sarcini</h3>
             <ul>
                 <p>- Avram Adina Valentina: Pagina Login, Pagina Info</p>
                 <p>- Oceanu Iulia: Pagina Home, Pagina Games</p>
                 <p>- Pohoață Alexandra Elena: Pagina Register, Pagina Settings, Pagina ChangePassword</p>
-                <p>- Avram Adina Valentina & Oceanu Iulia : Pagina Learn, Pagina Game1, Pagina Game2, Pagina Game3, Pagina Game4, Pagina Game5</p>
+                <p>- Avram Adina Valentina & Oceanu Iulia: Pagina Learn, Pagina Game1, Pagina Game2, Pagina Game3, Pagina Game4, Pagina Game5</p>
                 <p>- Avram Adina Valentina & Oceanu Iulia & Pohoață Alexandra Elena: Documentație</p>
+                <p>- Avram Adina Valentina & Oceanu Iulia & Pohoață Alexandra Elena: partea backend</p>
             </ul>
         </section>
         <section typeof="sa:MaterialsAndMethods" id="Bibliografia">
@@ -175,6 +217,22 @@
                 <li typeof="schema:ScholarlyArticle" resource="https://www.w3schools.com">
                     <cite property="schema:citation"><a href="https://www.w3schools.com">https://www.w3schools.com</a>.</cite>
                 </li>
+                <li typeof="schema:ScholarlyArticle" resource="https://www.php.net/manual/ro/book.pgsql.php">
+                    <cite property="schema:citation"><a href="https://www.php.net/manual/ro/book.pgsql.php">https://www.php.net/manual/ro/book.pgsql.php</a>.</cite>
+                </li>
+                <li typeof="schema:ScholarlyArticle" resource="https://stackoverflow.blog/">
+                    <cite property="schema:citation"><a href="https://stackoverflow.blog/">https://stackoverflow.blog/</a>.</cite>
+                </li>
+                <li typeof="schema:ScholarlyArticle" resource="https://www.php.net/">
+                    <cite property="schema:citation"><a href="https://www.php.net/">https://www.php.net/</a>.</cite>
+                </li>
+                <li typeof="schema:ScholarlyArticle" resource="https://www.diagrams.net/">
+                    <cite property="schema:citation"><a href="https://www.diagrams.net/">https://www.diagrams.net/</a>.</cite>
+                </li>
+                <li typeof="schema:ScholarlyArticle" resource="https://profs.info.uaic.ro/~vcosmin/tw">
+                    <cite property="schema:citation"><a href="https://profs.info.uaic.ro/~vcosmin/tw">https://profs.info.uaic.ro/~vcosmin/tw</a>.</cite>
+                </li>
+                
             </ol>
         </section>
     </article>
