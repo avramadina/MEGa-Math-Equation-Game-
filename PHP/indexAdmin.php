@@ -23,19 +23,16 @@
         ?>
 </div>
 
-
-    <h1>WELCOME ADMIN!!</h1>
+    <h1>WELCOME ADMIN!</h1>
 
     <form enctype="multipart/form-data" name="reg" method="POST" action="../PHP/addExercise.php" >
         <div class="imgcontainer">
             <label for="categorie"><b>Category</b></label>
 
             <select name="categorie">
-                  <option value="1">Add and Subtract</option>
-                  <option value="2">Multiply and Divide</option>
-                  <option value="3">Fractions and Decimals</option>
-                  <option value="4">Geometric Shapes</option>
-                  <option value="5">Quiz</option>
+                  
+                  <option value="2">Exercises</option>
+                  
                 </select>
 
             <label for="exercitiu"><b>Exercise</b></label>
@@ -47,25 +44,17 @@
             <label for="grad"><b>Grad</b></label>
             <input type="number" id="grad" placeholder="Enter grad" name="grad">
 
-            <!-- https://websistent.com/multiple-submit-buttons-in-php/ -->
             <div class="buttons">
                 <input class="button_save" type="submit" name="btn_submit" value="Save"/>
                 <input class="button_save" type="file" name="userfile" accept=".csv" />
-                <!-- <button class="button_save" type="submit" name="submit">Upload fisier</button> -->
+                
                 <input class="button_save" type="submit" name="btn_submit" value="Import CSV" />
                 <input class="button_save" type="submit" name="btn_submit" value="Export CSV" />
             </div>
 
-            <!-- <br> -->
-            <!-- <button class="button_save" type="submit" name="submit">Save</button> -->
-
         </div>
 
-
     </form>
-
-
-
 
 </body>
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/login.css" />
+    <link rel="stylesheet" href="../CSS/quiz.css" />
     <title>Quiz</title>
 </head>
 
@@ -18,231 +18,164 @@
         <a href="../HTML/Settings.html">Settings</a>
 
     </div>
-
+    <h1>Math Quiz</h1>
     <section>
+
         <div class="positionForm">
-            <h1> Math Quiz</h1>
-            <form class="form" method="POST" action="../PHP/login.php">
+
+
+            <form class="form" method="POST" action="../PHP/query.php">
+
+                <br><br>
 
                 <b>Question 1. What is three fifth of 100?</b>
 
-                <FORM method="POST" onsubmit="return checkAnswer(this,'D');">
+                <label><INPUT TYPE="RADIO" VALUE="A" ID="a" NAME="ex1">
+                    <b for="a">A. 3</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="B" ID="b" NAME="ex1">
+                    <b for="b">B. 5</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="C" ID="c" NAME="ex1">
+                    <b for="c">C. 20</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="D" ID="d" NAME="ex1">
+                    <b for="d">D. 60</b></label>
 
-                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 3
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 5
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 20
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc" onclick="checkAnswer()"> D. 60
-                    <BR>
-
-
-                </FORM>
                 <br><br>
+
                 <b>Question 2. If David’s age is 27 years old in 2011. What was his age in 2003?</b>
-                <FORM method="POST" onsubmit="return checkAnswer(this,'D');">
 
-                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 17 years
-                    <BR>
+                <label><INPUT TYPE="RADIO" VALUE="A" ID="a" NAME="ex2">
+                    <b for="a">A. 17 years</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="B" ID="b" NAME="ex2">
+                    <b for="b">B. 37 years</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="C" ID="c" NAME="ex2">
+                    <b for="c">C. 20 years</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="D" ID="d" NAME="ex2">
+                    <b for="d">D. 19 years</b></label>
 
-                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 37 years
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 20 years
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 19 years
-                    <BR>
-
-                    <INPUT TYPE="Submit" VALUE="Submit Answer">
-
-                </FORM>
                 <br><br>
+
+
                 <b>Question 3. What is the remainder of 21 divided by 7?</b>
-                <FORM method="POST" onsubmit="return checkAnswer(this,'D');">
 
-                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 21
-                    <BR>
+                <label><INPUT TYPE="RADIO" VALUE="A" ID="a" NAME="ex3">
+                    <b for="a">A. 21</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="B" ID="b" NAME="ex3">
+                    <b for="b">B. 7</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="C" ID="c" NAME="ex3">
+                    <b for="c">C. 1</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="D" ID="d" NAME="ex3">
+                    <b for="d">D. None of these</b></label>
 
-                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 7
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 1
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. None of these
-                    <BR>
-
-                    <INPUT TYPE="Submit" VALUE="Submit Answer">
-
-                </FORM>
                 <br><br>
+
+
                 <b>Question 4. What is 7% equal to?</b>
 
-                <FORM method="POST" onsubmit="return checkAnswer(this,'B');">
+                <label><INPUT TYPE="RADIO" VALUE="A" ID="a" NAME="ex4">
+                    <b for="a">A. 0.007</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="B" ID="b" NAME="ex4">
+                    <b for="b">B. 0.07</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="C" ID="c" NAME="ex4">
+                    <b for="c">C. 0.7</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="D" ID="d" NAME="ex4">
+                    <b for="d">D. 7</b></label>
 
-                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 0.007
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 0.07
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 0.7
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 7
-                    <BR>
-
-                    <INPUT TYPE="Submit" VALUE="Submit Answer">
-
-                </FORM>
                 <br><br>
+
+
                 <b>Question 5. I am a number. I have 7 in the ones place. I am less than 80 but greater than 70. What is my number?</b>
 
-                <FORM method="POST" onsubmit="return checkAnswer(this,'D');">
+                <label><INPUT TYPE="RADIO" VALUE="A" ID="a" NAME="ex5">
+                    <b for="a">A. 71</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="B" ID="b" NAME="ex5">
+                    <b for="b">B. 73</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="C" ID="c" NAME="ex5">
+                    <b for="c">C. 75</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="D" ID="d" NAME="ex5">
+                    <b for="d">D. 77</b></label>
 
-                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 71
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 73
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 75
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 77
-                    <BR>
-
-                    <INPUT TYPE="Submit" VALUE="Submit Answer">
-
-                </FORM>
                 <br><br>
+
+
                 <b>Question 6. How many years are there in a decade?</b>
 
-                <FORM method="POST" onsubmit="return checkAnswer(this,'B');">
+                <label><INPUT TYPE="RADIO" VALUE="A" ID="a" NAME="ex6">
+                    <b for="a">A. 5</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="B" ID="b" NAME="ex6">
+                    <b for="b">B. 10</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="C" ID="c" NAME="ex6">
+                    <b for="c">C. 15</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="D" ID="d" NAME="ex6">
+                    <b for="d">D. 20</b></label>
 
-                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 5
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 10
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 15
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 20
-                    <BR>
-
-                    <INPUT TYPE="Submit" VALUE="Submit Answer">
-
-                </FORM>
                 <br><br>
+
+
                 <b>Question 7. What is the square of 15?</b>
 
-                <FORM method="POST" onsubmit="return checkAnswer(this,'D');">
+                <label><INPUT TYPE="RADIO" VALUE="A" ID="a" NAME="ex7">
+                    <b for="a">A. 15</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="B" ID="b" NAME="ex7">
+                    <b for="b">B. 30</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="C" ID="c" NAME="ex7">
+                    <b for="c">C. 252</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="D" ID="d" NAME="ex7">
+                    <b for="d">D. 225</b></label>
 
-                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 15
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 30
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 252
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 225
-                    <BR>
-
-                    <INPUT TYPE="Submit" VALUE="Submit Answer">
-
-                </FORM>
                 <br><br>
+
+
                 <b>Question 8. What is the value of x if x<sup>2</sup> = 169</b>
 
-                <FORM method="POST" onsubmit="return checkAnswer(this,'B');">
+                <label><INPUT TYPE="RADIO" VALUE="A" ID="a" NAME="ex8">
+                    <b for="a">A. 1</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="B" ID="b" NAME="ex8">
+                    <b for="b">B. 13</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="C" ID="c" NAME="ex8">
+                    <b for="c">C. 169</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="D" ID="d" NAME="ex8">
+                    <b for="d">D. 338</b></label>
 
-                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 1
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 13
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 169
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 338
-                    <BR>
-
-                    <INPUT TYPE="Submit" VALUE="Submit Answer">
-
-                </FORM>
                 <br><br>
+
+
                 <b>Question 9. What is the reciprocal of 17/15?</b>
 
-                <FORM method="POST" onsubmit="return checkAnswer(this,'B');">
+                <label><INPUT TYPE="RADIO" VALUE="A" ID="a" NAME="ex9">
+                    <b for="a">A. 1.13</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="B" ID="b" NAME="ex9">
+                    <b for="b">B. <sup>15</sup>/<sub>17</sub></b></label>
+                <label><INPUT TYPE="RADIO" VALUE="C" ID="c" NAME="ex9">
+                    <b for="c">C. <sup>17</sup>/<sub>15</sub></b></label>
+                <label><INPUT TYPE="RADIO" VALUE="D" ID="d" NAME="ex9">
+                    <b for="d">D. <sup>30</sup>/<sub>34</sub></label></b>
+                </label>
 
-                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 1.13
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. <sup>15</sup>/<sub>17</sub>
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. <sup>17</sup>/<sub>15</sub>
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. <sup>30</sup>/<sub>34</sub>
-                    <BR>
-
-                    <INPUT TYPE="Submit" VALUE="Submit Answer">
-
-                </FORM>
                 <br><br>
-                <b>Question 10. In a century how many months are there? </b>
 
-                <FORM method="POST" onsubmit="return checkAnswer(this,'C');">
 
-                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 12
-                    <BR>
+                <label><b>Question 10. In a century how many months are there? </b></label>
 
-                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 120
-                    <BR>
+                <label><INPUT TYPE="RADIO" VALUE="A" ID="a" NAME="ex10">
+                    <b for="a">A. 12</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="B" ID="b" NAME="ex10">
+                    <b for="b">B. 120</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="C" ID="c" NAME="ex10">
+                    <b for="c">C. 1200</b></label>
+                <label><INPUT TYPE="RADIO" VALUE="D" ID="d" NAME="ex10">
+                    <b for="d">D. 12000</b></label>
 
-                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 1200
-                    <BR>
-
-                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 12000
-                    <BR>
-
-                    <INPUT TYPE="Submit" VALUE="Submit Answer">
-
-                </FORM>
-
-                <!-- <form class="form" method="POST" action="../PHP/login.php">
-                <div class="imgcontainer">
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" id="email" placeholder="Enter Email" name="email" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" id="psw" placeholder="Enter Password" name="parola" required>
-
-                    <label><input class = "rememberMe" type="checkbox" checked="checked" name="remember">Remember me</label>
-
-                    <button class="button_login" type="submit">Login</button>
-
+                <br>
+                <div class="buton">
+                    <button class="button_submit" type="submit">Submit</button>
                 </div>
-            </form> -->
+                <br><br>
 
             </form>
         </div>
     </section>
 
-
-
-
+    <br><br>
 
 </body>
 

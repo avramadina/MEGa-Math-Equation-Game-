@@ -33,11 +33,11 @@ if ($utilizator->schimbare_parola()) {
         alert('Parola s-a actualizat cu succes.');
         window.location.replace('../HTML/Login.html');
     </script>";
-    // header('Location: ../HTML/Login.html');
+   
 } else {
     echo "<script>
         alert('Parola nu s-a actualizat. Ai gresit user/parola.');
         window.location.replace('../HTML/ChangePass.html');
     </script>";
-    // header('Location: ../HTML/ChangePass.html');
+    
 }

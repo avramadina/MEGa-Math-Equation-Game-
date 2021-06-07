@@ -49,7 +49,8 @@ document.getElementById("app").innerHTML = `
 startTimer();
 
 function onTimesUp() {
-    clearInterval(timerInterval);
+    // clearInterval(timerInterval);
+    window.location.href = "../HTML/Game2.html";
 }
 
 function startTimer() {
@@ -63,7 +64,8 @@ function startTimer() {
         setRemainingPathColor(timeLeft);
 
         if (timeLeft === 0) {
-            onTimesUp();
+            //onTimesUp();
+            window.location.reload();
         }
     }, 1000);
 }

@@ -5,9 +5,12 @@ html {
 }
 
 body {
+    background-image: linear-gradient(90deg, rgba(149, 100, 209, 1) 0%, rgba(96, 59, 140, 1) 15%, rgba(15, 26, 80, 1) 40%, rgba(15, 26, 80, 1) 70%, rgba(96, 59, 140, 1) 85%, rgba(149, 100, 209, 1) 100%);
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(90deg, rgba(149, 100, 209, 1) 0%, rgba(96, 59, 140, 1) 15%, rgba(15, 26, 80, 1) 40%, rgba(15, 26, 80, 1) 70%, rgba(96, 59, 140, 1) 85%, rgba(149, 100, 209, 1) 100%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .topnav-right {
@@ -32,10 +35,6 @@ section {
     display: flex;
 }
 
-a {
-    text-decoration: none;
-}
-
 .body {
     margin: 0;
     clear: both;
@@ -43,9 +42,7 @@ a {
 
 .positionForm {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 90%;
+    align-items: center;
 }
 
 h1 {
@@ -53,24 +50,11 @@ h1 {
     text-align: center;
     text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px #24f5f5, 0 0 5px rgb(116, 0, 139);
     position: relative;
-    padding-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-self: center;
 }
 
-form {
+.form {
     background-color: rgba(255, 255, 255, 0.336);
     border-radius: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.imgcontainer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: transparent;
 }
 
 label {
@@ -87,7 +71,7 @@ input {
     border-radius: 20px;
 }
 
-.button_save {
+.button_submit {
     background-color: #dd3f9b;
     color: white;
     text-align: center;
@@ -95,9 +79,14 @@ input {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: auto;
+    width: 20%;
     align-self: center;
     border-radius: 30px;
+}
+
+.buton {
+    display: flex;
+    justify-content: center;
 }
 
 button:hover {
@@ -105,24 +94,23 @@ button:hover {
 }
 
 @media (max-width: 650px) {
-    body {
-        font-size: 1rem;
-    }
     .topnav-right {
         width: 100%;
         font-size: 11px;
     }
+    .form {
+        margin-left: 30px;
+        padding-left: 10px;
+    }
     .positionForm {
-        padding-left: 4%;
-    }
-    form {
         width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    section {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+    }
+    body {
+        font-size: 1rem;
     }
     h1 {
         font-size: 3rem;
@@ -130,25 +118,16 @@ button:hover {
 }
 
 @media (min-width: 651px) and (max-width: 1025px) {
-    body {
-        font-size: 2rem;
-    }
     .topnav-right {
         width: 100%;
-        font-size: 30px;
+        font-size: 24px;
         padding: 14px 16px;
     }
     .positionForm {
-        padding-left: 7%;
-    }
-    .imgcontainer {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    form {
         width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
+    }
+    body {
+        font-size: 1.6rem;
     }
     h1 {
         font-size: 3.2rem;
@@ -156,6 +135,10 @@ button:hover {
     section {
         display: flex;
         flex-direction: column-reverse;
+    }
+    .form {
+        margin-left: 80px;
+        padding-left: 30px;
     }
 }
 
@@ -165,24 +148,26 @@ button:hover {
         background-image: url('background.png'), linear-gradient(90deg, rgba(149, 100, 209, 1) 0%, rgba(96, 59, 140, 1) 15%, rgba(15, 26, 80, 1) 40%, rgba(15, 26, 80, 1) 70%, rgba(96, 59, 140, 1) 85%, rgba(149, 100, 209, 1) 100%);
     }
     .topnav-right {
-        width: 100%;
-        font-size: 24px;
+        float: right;
+        width: 26%;
+        margin-right: 10px;
+        margin-top: 30px;
+        border-radius: 8px;
+        font-size: 17px;
     }
     h1 {
         font-size: 3.4rem;
+        padding-top: 100px;
     }
     section {
         display: inline-flex;
         justify-content: center;
     }
-    form {
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
+    .form {
+        margin-left: 130px;
+        padding-left: 30px;
     }
-}
-
-.buttons {
-    display: flex;
-    flex-direction: column;
+    .positionForm {
+        width: 70%;
+    }
 }

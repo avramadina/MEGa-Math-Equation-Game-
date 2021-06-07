@@ -21,7 +21,6 @@
                     die();
                 }
                 else header('Location: ../HTML/Login.html?error=emptyinput');
-                //echo "Nu m am conecat";
             
             } 
             else echo "Nu m am conectat";  

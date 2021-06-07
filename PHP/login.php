@@ -27,13 +27,13 @@ if ($utilizator->autentificare()) {
     if (isset($_SESSION["utilizator"])) {
         // daca utilizatorul a folosit la logare email-ul "admin@yahoo.com", atunci merg in PHP/indexAdmin.php
         if ($_SESSION["utilizator"] == "admin@yahoo.com") {
-            // header('Location: ../PHP/indexAdmin.php');
+            
             echo "<script>
                 alert('Te-ai logat cu contul de admin.');
                 window.location.replace('../PHP/indexAdmin.php');
             </script>";
         } else { // daca nu, il duc in PHP/indexGame.php
-            // header('Location: ../PHP/indexGame.php');
+            
             echo "<script>
                 alert('Te-ai logat cu succes.');
                 window.location.replace('../PHP/indexGame.php');
@@ -41,7 +41,7 @@ if ($utilizator->autentificare()) {
         }
     }
 } else {
-    // header('Location: ../HTML/Login.html');
+    
     echo "<script>
         alert('Logarea a esuat. .');
         window.location.replace('../HTML/Login.html');
