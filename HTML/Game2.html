@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/game2.css" />
     <title>Multiply and Divide Game</title>
+
 </head>
 
 <body class="body">
@@ -19,8 +20,29 @@
 
         <form class="form">
 
+            <!-- <script>
+                giveScore();
+                async function giveScore() {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.getElementById("score").innerHTML = this.responseText;
+                            console.log(this.responseText);
+                        }
+                    };
+                    var g = await getGrad()
+                    console.log(g);
+                    let obj = {
+                        grad: g
+                    };
+                    let json = JSON.stringify(obj);
+                    xhttp.open("POST", "http://localhost/dashboard/web/iulia/GITT/PHP/tray.php", true);
+                    xhttp.send(json);
+                }
+            </script> -->
+
             <div class="settings">
-                <label class="score"><b> Score</b></label>
+                <label id="score" class="score"><b>Score</b></label>
                 <h2>Multiply and Divide</h2>
                 <img class="icon_sound" src="../IMG/soundON.png" onclick="this.src='../IMG/soundOFF.png'  " alt="img">
             </div>
@@ -28,21 +50,43 @@
             <div class="timer" id="app"></div>
 
             <script type="text/javascript" src="../JS/timer&screen.js"></script>
+            <script type="text/javascript" src="../JS/exercise.js"></script>
+
+
+            <script>
+                giveExercise();
+                async function giveExercise() {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.getElementById("ex").innerHTML = this.responseText;
+                            console.log(this.responseText);
+                        }
+                    };
+
+                    var g = await getGrad()
+                    console.log(g);
+                    let obj = {
+                        grad: g
+                    };
+                    let json = JSON.stringify(obj);
+                    xhttp.open("POST", "http://localhost/dashboard/web/iulia/GITT/PHP/tray.php", true);
+                    xhttp.send(json);
+                }
+            </script>
 
             <br><br>
             <div class="equation">
-                <label><b> 5 x 2 = </b></label>
+                <label id="ex"></label>
                 <input maxlength="4">
             </div>
             <div class="buttons_form">
-                <button class="buttons_form_style" formaction="../HTML/Game2.html" type="submit">Reply</button>
-                <button class="buttons_form_style" type="submit">Verify</button>
+                <!-- <button class="buttons_form_style" formaction="../HTML/Game2.html" type="submit">Reply</button>
+                <button class="buttons_form_style" type="submit">Verify</button> -->
                 <button class="buttons_form_style" type="submit">Next Equation</button>
 
             </div>
-
-
-            <br> <br><br><br>
+            <br><br><br><br>
         </form>
 
     </section>

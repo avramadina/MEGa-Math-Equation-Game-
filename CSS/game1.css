@@ -262,7 +262,7 @@ input {
    
  
     .form {
-        background-image: url('crayons3.png'), radial-gradient(circle, rgba(195, 255, 239, 1) 0%, rgba(106, 247, 224, 1) 33%, rgba(28, 255, 241, 1) 61%, rgba(80, 127, 241, 1) 93%);
+        background-image: url('../IMG/crayons3.png'), radial-gradient(circle, rgba(195, 255, 239, 1) 0%, rgba(106, 247, 224, 1) 33%, rgba(28, 255, 241, 1) 61%, rgba(80, 127, 241, 1) 93%);
         width: 80%;
         height: 60%;
         margin-bottom: 40px;

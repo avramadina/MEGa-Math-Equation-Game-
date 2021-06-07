@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/login.css" />
+    <title>Quiz</title>
+</head>
+
+<body class="body">
+
+    <div class="topnav-right">
+        <a href="../HTML/home.html">Home</a>
+        <a href="../HTML/Register.html">Register</a>
+        <a href="../HTML/Games.html">Games</a>
+        <a href="../HTML/Settings.html">Settings</a>
+
+    </div>
+
+    <section>
+        <div class="positionForm">
+            <h1> Math Quiz</h1>
+            <form class="form" method="POST" action="../PHP/login.php">
+
+                <b>Question 1. What is three fifth of 100?</b>
+
+                <FORM method="POST" onsubmit="return checkAnswer(this,'D');">
+
+                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 3
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 5
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 20
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc" onclick="checkAnswer()"> D. 60
+                    <BR>
+
+
+                </FORM>
+                <br><br>
+                <b>Question 2. If David’s age is 27 years old in 2011. What was his age in 2003?</b>
+                <FORM method="POST" onsubmit="return checkAnswer(this,'D');">
+
+                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 17 years
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 37 years
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 20 years
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 19 years
+                    <BR>
+
+                    <INPUT TYPE="Submit" VALUE="Submit Answer">
+
+                </FORM>
+                <br><br>
+                <b>Question 3. What is the remainder of 21 divided by 7?</b>
+                <FORM method="POST" onsubmit="return checkAnswer(this,'D');">
+
+                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 21
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 7
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 1
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. None of these
+                    <BR>
+
+                    <INPUT TYPE="Submit" VALUE="Submit Answer">
+
+                </FORM>
+                <br><br>
+                <b>Question 4. What is 7% equal to?</b>
+
+                <FORM method="POST" onsubmit="return checkAnswer(this,'B');">
+
+                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 0.007
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 0.07
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 0.7
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 7
+                    <BR>
+
+                    <INPUT TYPE="Submit" VALUE="Submit Answer">
+
+                </FORM>
+                <br><br>
+                <b>Question 5. I am a number. I have 7 in the ones place. I am less than 80 but greater than 70. What is my number?</b>
+
+                <FORM method="POST" onsubmit="return checkAnswer(this,'D');">
+
+                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 71
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 73
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 75
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 77
+                    <BR>
+
+                    <INPUT TYPE="Submit" VALUE="Submit Answer">
+
+                </FORM>
+                <br><br>
+                <b>Question 6. How many years are there in a decade?</b>
+
+                <FORM method="POST" onsubmit="return checkAnswer(this,'B');">
+
+                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 5
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 10
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 15
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 20
+                    <BR>
+
+                    <INPUT TYPE="Submit" VALUE="Submit Answer">
+
+                </FORM>
+                <br><br>
+                <b>Question 7. What is the square of 15?</b>
+
+                <FORM method="POST" onsubmit="return checkAnswer(this,'D');">
+
+                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 15
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 30
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 252
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 225
+                    <BR>
+
+                    <INPUT TYPE="Submit" VALUE="Submit Answer">
+
+                </FORM>
+                <br><br>
+                <b>Question 8. What is the value of x if x<sup>2</sup> = 169</b>
+
+                <FORM method="POST" onsubmit="return checkAnswer(this,'B');">
+
+                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 1
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 13
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 169
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 338
+                    <BR>
+
+                    <INPUT TYPE="Submit" VALUE="Submit Answer">
+
+                </FORM>
+                <br><br>
+                <b>Question 9. What is the reciprocal of 17/15?</b>
+
+                <FORM method="POST" onsubmit="return checkAnswer(this,'B');">
+
+                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 1.13
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. <sup>15</sup>/<sub>17</sub>
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. <sup>17</sup>/<sub>15</sub>
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. <sup>30</sup>/<sub>34</sub>
+                    <BR>
+
+                    <INPUT TYPE="Submit" VALUE="Submit Answer">
+
+                </FORM>
+                <br><br>
+                <b>Question 10. In a century how many months are there? </b>
+
+                <FORM method="POST" onsubmit="return checkAnswer(this,'C');">
+
+                    <INPUT TYPE="RADIO" VALUE="A" NAME="cc"> A. 12
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="B" NAME="cc"> B. 120
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="C" NAME="cc"> C. 1200
+                    <BR>
+
+                    <INPUT TYPE="RADIO" VALUE="D" NAME="cc"> D. 12000
+                    <BR>
+
+                    <INPUT TYPE="Submit" VALUE="Submit Answer">
+
+                </FORM>
+
+                <!-- <form class="form" method="POST" action="../PHP/login.php">
+                <div class="imgcontainer">
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" id="email" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" id="psw" placeholder="Enter Password" name="parola" required>
+
+                    <label><input class = "rememberMe" type="checkbox" checked="checked" name="remember">Remember me</label>
+
+                    <button class="button_login" type="submit">Login</button>
+
+                </div>
+            </form> -->
+
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+</body>
+
+</html>
