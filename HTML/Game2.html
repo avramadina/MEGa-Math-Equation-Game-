@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/game2.css" />
-    <title>Multiply and Divide Game</title>
+    <title>Exercises</title>
+    <script src="../JS/score.js"></script>
 
 </head>
 
@@ -18,32 +19,41 @@
 
     <section class="play">
 
-        <form class="form">
+        <div class="form">
 
-            <!-- <script>
-                giveScore();
-                async function giveScore() {
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            document.getElementById("score").innerHTML = this.responseText;
-                            console.log(this.responseText);
-                        }
-                    };
-                    var g = await getGrad()
-                    console.log(g);
-                    let obj = {
-                        grad: g
-                    };
-                    let json = JSON.stringify(obj);
-                    xhttp.open("POST", "http://localhost/dashboard/web/iulia/GITT/PHP/tray.php", true);
-                    xhttp.send(json);
+            <script>
+                function raspuns() {
+                    localStorage.setItem("raspuns", document.getElementById('raspuns').value);
+
                 }
-            </script> -->
+            </script>
+
+            <script>
+                var xhttp = new XMLHttpRequest();
+
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("score").innerHTML = this.responseText;
+                        setScor(this.responseText);
+                        console.log(this.responseText);
+                    }
+                };
+
+                let obj = {
+                    exercitiu: localStorage.getItem("exercitiu"),
+                    raspuns: localStorage.getItem("raspuns"),
+                    scor: localStorage.getItem("scor")
+                };
+                let json = JSON.stringify(obj);
+                xhttp.open("POST", "http://localhost/dashboard/web/iulia/GITT/PHP/verifyExercise.php", true);
+                xhttp.send(json);
+            </script>
 
             <div class="settings">
-                <label id="score" class="score"><b>Score</b></label>
-                <h2>Multiply and Divide</h2>
+
+                <label class="score"><b>Score: </b><b id="score"></b></label>
+
+                <h2>Exercises</h2>
                 <img class="icon_sound" src="../IMG/soundON.png" onclick="this.src='../IMG/soundOFF.png'  " alt="img">
             </div>
             <br>
@@ -51,6 +61,7 @@
 
             <script type="text/javascript" src="../JS/timer&screen.js"></script>
             <script type="text/javascript" src="../JS/exercise.js"></script>
+            <script type="text/javascript" src="../JS/score.js"></script>
 
 
             <script>
@@ -60,6 +71,7 @@
                     xhttp.onreadystatechange = function() {
                         if (this.readyState == 4 && this.status == 200) {
                             document.getElementById("ex").innerHTML = this.responseText;
+                            setExercitiu(this.responseText);
                             console.log(this.responseText);
                         }
                     };
@@ -70,7 +82,7 @@
                         grad: g
                     };
                     let json = JSON.stringify(obj);
-                    xhttp.open("POST", "http://localhost/dashboard/web/iulia/GITT/PHP/tray.php", true);
+                    xhttp.open("POST", "http://localhost/dashboard/web/iulia/GITT/PHP/getExercise.php", true);
                     xhttp.send(json);
                 }
             </script>
@@ -78,21 +90,19 @@
             <br><br>
             <div class="equation">
                 <label id="ex"></label>
-                <input maxlength="4">
+                <input id="raspuns" maxlength="7" required>
             </div>
             <div class="buttons_form">
-                <!-- <button class="buttons_form_style" formaction="../HTML/Game2.html" type="submit">Reply</button>
-                <button class="buttons_form_style" type="submit">Verify</button> -->
-                <button class="buttons_form_style" type="submit">Next Equation</button>
+
+                <button class="buttons_form_style" type="submit" onclick="window.location.href='Game2.html', raspuns()">Next Equation</button>
 
             </div>
             <br><br><br><br>
-        </form>
+
+        </div>
 
     </section>
 
-    <!-- <button onclick="openFullscreen();"></button>
-    <img src="fullscreen.png" width="100%" controls id="fullscreen"> -->
 </body>
 
 </html>

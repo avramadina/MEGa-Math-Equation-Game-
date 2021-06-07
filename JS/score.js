@@ -1,17 +1,24 @@
-function setJson(exercitiu, raspuns, scor) {
+function setExercitiu(exercitiu) {
     localStorage.setItem("exercitiu", exercitiu);
-    localStorage.setItem("raspuns", raspuns);
+}
+
+// function setRaspuns(raspuns) {
+//     localStorage.setItem("raspuns", raspuns);
+
+// }
+
+function setScor(scor) {
     localStorage.setItem("scor", scor);
 }
 
-function getExercitiu() {
-    return localStorage.getItem("exercitiu");
-}
+// function getExercitiu() {
+//     return localStorage.getItem("exercitiu");
+// }
 
-function getRaspuns() {
-    return localStorage.getItem("raspuns");
-}
+// function getRaspuns() {
+//     return localStorage.getItem("raspuns");
+// }
 
-function getScor() {
-    return localStorage.getItem("scor");
-}
+// function getScore() {
+//     return localStorage.getItem("scor");
+// }

@@ -1,6 +1,6 @@
 <?php
 
-$conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=postgres");
+$conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=iulia");
 if ($_POST['btn_submit'] == "Save") {
     if (isset($_POST["exercitiu"]) && isset($_POST["raspuns"]) && isset($_POST["grad"]) && isset($_POST["categorie"])) {
         $exercitiu = $_POST["exercitiu"];
@@ -10,67 +10,33 @@ if ($_POST['btn_submit'] == "Save") {
 
         $luat = 0;
 
-        if($categorie == 1)
-        {
-            $query = pg_query($conn, "INSERT INTO addandsubtract (id, exercitiu, raspuns, grad, luat)  VALUES ((SELECT COALESCE(MAX(id)+1,1) FROM addandsubtract), '$exercitiu', '$raspuns', '$grad', '$luat');");
-            if ( $query ) {
-                echo '<script>alert("Am inserat cu succes.")
-                window.history.back();</script>';
+        if ($categorie == 2) {
+            $query = pg_query($conn, "INSERT INTO exercises (id, exercitiu, raspuns, grad, luat)  VALUES ((SELECT COALESCE(MAX(id)+1,1) FROM exercises), '$exercitiu', '$raspuns', '$grad', '$luat');");
+            if ($query) {
+                echo "<script>
+                        alert('Am inserat cu succes.');
+                        window.location.replace('../PHP/indexAdmin.php');
+                    </script>";
                 die();
+            } else {
+                echo "<script>
+                    alert('Nu am inserat.');
+                    window.location.replace('../PHP/indexAdmin.php');
+                </script>";
             }
-            else echo "Nu m am conecat";
-        }
-
-        if($categorie == 2)
-        {
-            $query = pg_query($conn, "INSERT INTO multiplyanddivide (id, exercitiu, raspuns, grad, luat)  VALUES ((SELECT COALESCE(MAX(id)+1,1) FROM multiplyanddivide), '$exercitiu', '$raspuns', '$grad', '$luat');");
-            if ( $query ) {
-                echo '<script>alert("Am inserat cu succes.")
-                window.history.back();</script>';
-                die();
-            }
-            else echo "Nu m am conecat";
-        }
-
-        if($categorie == 3)
-        {
-            $query = pg_query($conn, "INSERT INTO fractionsanddecimals (id, exercitiu, raspuns, grad, luat)  VALUES ((SELECT COALESCE(MAX(id)+1,1) FROM fractionsanddecimals), '$exercitiu', '$raspuns', '$grad', '$luat');");
-            if ( $query ) {
-                echo '<script>alert("Am inserat cu succes.")
-                window.history.back();</script>';
-                die();
-            }
-            else echo "Nu m am conecat";
-        }
-
-        if($categorie == 4)
-        {
-            $query = pg_query($conn, "INSERT INTO geometricshapes (id, exercitiu, raspuns, grad, luat)  VALUES ((SELECT COALESCE(MAX(id)+1,1) FROM geometricshapes), '$exercitiu', '$raspuns', '$grad', '$luat');");
-            if ( $query ) {
-                echo '<script>alert("Am inserat cu succes.")
-                window.history.back();</script>';
-                die();
-            }
-            else echo "Nu m am conecat";
         }
     }
-} else if($_POST['btn_submit'] == "Import CSV") {
+} else if ($_POST['btn_submit'] == "Import CSV") {
     if (isset($_POST["categorie"])) {
         $categorie = $_POST["categorie"];
         $nume_tabel = null;
-        if ($categorie == 1) {
-            $nume_tabel = "addandsubtract";
-        } else if ($categorie == 2) {
-            $nume_tabel = "multiplyanddivide";
-        } else if ($categorie == 3) {
-            $nume_tabel = "fractionsanddecimals";
-        } else if ($categorie == 4) {
-            $nume_tabel = "geometricshapes";
-        }
+        if ($categorie == 2) {
+            $nume_tabel = "exercises";
+        }  
 
         if ($nume_tabel != null) {
             $filename = $_FILES['userfile']['tmp_name'];
-            
+
             $query = "COPY public." . $nume_tabel . " FROM '" . $filename . "' DELIMITER ',' CSV HEADER;";
             $result = pg_query($conn, $query);
 
@@ -83,19 +49,14 @@ if ($_POST['btn_submit'] == "Save") {
             die();
         }
     }
-} else if($_POST['btn_submit'] == "Export CSV") {
+} else if ($_POST['btn_submit'] == "Export CSV") {
     if (isset($_POST["categorie"])) {
         $categorie = $_POST["categorie"];
         $nume_tabel = null;
-        if ($categorie == 1) {
-            $nume_tabel = "addandsubtract";
-        } else if ($categorie == 2) {
-            $nume_tabel = "multiplyanddivide";
-        } else if ($categorie == 3) {
-            $nume_tabel = "fractionsanddecimals";
-        } else if ($categorie == 4) {
-            $nume_tabel = "geometricshapes";
-        }
+        if ($categorie == 2) {
+            $nume_tabel = "exercises";
+        } 
+        
 
         if ($nume_tabel != null) {
             $query = "SELECT * FROM " . $nume_tabel . ";";
